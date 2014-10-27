@@ -1,4 +1,6 @@
 OpenRateSimple
 ==============
 
-OpenRate Simple Example
+OpenRate Simple Example. The simplest non-trivial OpenRate application.
+
+
