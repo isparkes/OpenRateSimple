@@ -54,9 +54,9 @@
  */
 package Simple;
 
-import OpenRate.adapter.file.FlatFileOutputAdapter;
-import OpenRate.record.FlatRecord;
-import OpenRate.record.IRecord;
+import com.openrate.adapter.file.FlatFileOutputAdapter;
+import com.openrate.record.FlatRecord;
+import com.openrate.record.IRecord;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -66,13 +66,6 @@ import java.util.Collection;
  */
 public class SimpleSTOutputAdapter
         extends FlatFileOutputAdapter {
-
-  /**
-   * Constructor for SimpleOutputAdapter.
-   */
-  public SimpleSTOutputAdapter() {
-    super();
-  }
 
   /**
    * We transform the records here so that they are ready to output making any
@@ -87,6 +80,7 @@ public class SimpleSTOutputAdapter
    * Note that this is just undoing the transformation that we did in the input
    * adapter.
    *
+   * @param r
    * @return
    */
   @Override
@@ -111,6 +105,7 @@ public class SimpleSTOutputAdapter
    * specific changes to the record that are necessary to make it ready for
    * output.
    *
+   * @param r
    * @return
    */
   @Override

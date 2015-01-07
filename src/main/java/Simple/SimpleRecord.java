@@ -54,7 +54,7 @@
  */
 package Simple;
 
-import OpenRate.record.RatingRecord;
+import com.openrate.record.RatingRecord;
 import java.util.ArrayList;
 
 /**
@@ -200,7 +200,7 @@ public final class SimpleRecord extends RatingRecord {
   public ArrayList<String> getDumpInfo() {
 
     ArrayList<String> tmpDumpList;
-    tmpDumpList = new ArrayList<String>();
+    tmpDumpList = new ArrayList<>();
 
     // Format the fields
     if (this.RECORD_TYPE == DETAIL_RECORD) {

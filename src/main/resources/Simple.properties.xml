@@ -44,25 +44,6 @@
 
     <!-- The "Process" section executes the modules in the order they are listed -->
     <Process>
-      
-      <!-- Perform the lookup on the B Number. The lookup uses the data in the
-           "PrefixCache" to lookup against, and this is stored in memory for
-           performance reasons. You can look at the definition of the cache
-           at the end of the file to know the location of the data, but if you
-           are in too much of a hurry it is at: ConfigData/Simple/prefixdesc.dat
-           
-           The Batch size tells us how many records to get at once. In this 
-           example we use 5000 which is a good balance between memory and speed.
-           The choice of batch size depends on how long your pipe is, how slow 
-           your output persistence is and how much memory you want to use for
-           the processing. -->
-      <DestLookup>
-        <ClassName>Simple.DestLookup</ClassName>
-         <Active>True</Active>
-        <DataCache>PrefixCache</DataCache>
-        <BatchSize>5000</BatchSize>
-      </DestLookup>
-
       <!-- Dump out the diagnostics to file. This will create a dump file
            testpipeline*.dump.
            
@@ -72,7 +53,7 @@
               Errors - Dump records with errors
               Flag - Dump records where we have set the dumping flag -->
       <DumpFirst>
-        <ClassName>OpenRate.process.Dump</ClassName>
+        <ClassName>com.openrate.process.Dump</ClassName>
         <Active>True</Active>
         <DumpType>All</DumpType>
         <DumpFilePath>Data/Simple</DumpFilePath>
@@ -102,21 +83,10 @@
   </SimplePipe>
 
   <Resource>
-    <LogFactory>
-      <ClassName>OpenRate.logging.LogFactory</ClassName>
-      <Properties>logSimple.properties</Properties>
-      <DefaultCategory>SimplePipe</DefaultCategory>
-    </LogFactory>
-
     <ECI>
-      <ClassName>OpenRate.configurationmanager.EventHandler</ClassName>
       <Port>8086</Port>
       <MaxConnection>2</MaxConnection>
     </ECI>
-
-    <TransactionManagerFactory>
-      <ClassName>OpenRate.transaction.TransactionManagerFactory</ClassName>
-    </TransactionManagerFactory>
 
     <CacheFactory>
       <ClassName>OpenRate.resource.CacheFactory</ClassName>
