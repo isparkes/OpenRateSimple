@@ -54,7 +54,7 @@
  */
 package Simple;
 
-import com.openrate.record.RatingRecord;
+import OpenRate.record.RatingRecord;
 import java.util.ArrayList;
 
 /**

@@ -13,9 +13,9 @@
     
   <dependencies>
     <dependency>
-      <groupId>com.openrate</groupId>
-      <artifactId>OpenRate2</artifactId>
-      <version>0.0.1</version>
+      <groupId>OpenRate</groupId>
+      <artifactId>OpenRate</artifactId>
+      <version>1.5.2.2</version>
     </dependency>
   </dependencies>
   <name>Openrate Simple rating project</name>

@@ -54,9 +54,9 @@
  */
 package Simple;
 
-import com.openrate.adapter.file.FlatFileInputAdapter;
-import com.openrate.record.FlatRecord;
-import com.openrate.record.IRecord;
+import OpenRate.adapter.file.FlatFileInputAdapter;
+import OpenRate.record.FlatRecord;
+import OpenRate.record.IRecord;
 
 /**
  * This class is an example of how one would write an InputAdapter. An input

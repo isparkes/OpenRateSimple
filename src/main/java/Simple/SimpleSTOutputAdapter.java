@@ -54,9 +54,9 @@
  */
 package Simple;
 
-import com.openrate.adapter.file.FlatFileOutputAdapter;
-import com.openrate.record.FlatRecord;
-import com.openrate.record.IRecord;
+import OpenRate.adapter.file.FlatFileOutputAdapter;
+import OpenRate.record.FlatRecord;
+import OpenRate.record.IRecord;
 import java.util.ArrayList;
 import java.util.Collection;
 
