@@ -56,3 +56,17 @@ telenet localhost 8086<br>
 <br>
 openrate> Framework:shutdown=true<br>
 <br>
+<br>
+Configuration<br>
+=============<br>
+This is a very simple pipeline. It just enriches the input record with a zone<br>
+destination based on a longest prefix match.<br>
+<br>
+OpenRate reads the configuration file "ConfigData/Simple/prefixdest.dat" on<br>
+startup, and uses an in-memory table to perform the match and enrichment.<br>
+<br>
+The configuration is read on each startup, when you tell the framework to<br>
+reload it (using the built-in telnet based configuration client), or can be<br>
+configured to auto-refresh on a periodic basis.
+<br>
+<br>
