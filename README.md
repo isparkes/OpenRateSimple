@@ -3,7 +3,7 @@ OpenRateSimple<br>
 <br>
 OpenRate Simple Example. The simplest non-trivial OpenRate application.<br>
 <br>
-Compatible with OpenRate 1.5.2.2 or later.<br>
+Compatible with OpenRate 1.5.2.4 or later.<br>
 <br>
 Building<br>
 ========<br>
@@ -18,7 +18,7 @@ build this. Look at the Maven output and you will see something like this:<br>
       <br>
       Missing:<br>
       ----------<br>
-      1) OpenRate:OpenRate:jar:1.5.2.2<br>
+      1) OpenRate:OpenRate:jar:1.5.2.4<br>
       <br>
 If this is the case, clone the main OpenRate framework repository and clean and<br>
 install it.<br>

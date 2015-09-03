@@ -56,7 +56,9 @@ package Simple;
 
 import OpenRate.adapter.file.FlatFileInputAdapter;
 import OpenRate.record.FlatRecord;
+import OpenRate.record.HeaderRecord;
 import OpenRate.record.IRecord;
+import OpenRate.record.TrailerRecord;
 
 /**
  * This class is an example of how one would write an InputAdapter. An input
@@ -89,7 +91,7 @@ public class SimpleInputAdapter
    * @return
    */
   @Override
-  public IRecord procHeader(IRecord r) {
+  public HeaderRecord procHeader(HeaderRecord r) {
     // Reset the internal record number counter - we are starting a new stream
     intRecordNumber = 0;
 
@@ -112,7 +114,7 @@ public class SimpleInputAdapter
    * @return
    */
   @Override
-  public IRecord procValidRecord(IRecord r) {
+  public IRecord procValidRecord(FlatRecord r) {
     String tmpData;
     SimpleRecord tmpDataRecord = null;
     FlatRecord tmpFlatRecord;
@@ -147,7 +149,7 @@ public class SimpleInputAdapter
 
       // set the record number
       intRecordNumber++;
-      tmpDataRecord.RecordNumber = intRecordNumber;
+      tmpDataRecord.recordNumber = intRecordNumber;
     }
 
     // Return the modified record in the Common record format (IRecord)
@@ -164,7 +166,7 @@ public class SimpleInputAdapter
    * @return
    */
   @Override
-  public IRecord procErrorRecord(IRecord r) {
+  public IRecord procErrorRecord(FlatRecord r) {
     // The FlatFileInputAdapter is not able to create error records, so we
     // do not have to do anything for this
     return r;
@@ -178,7 +180,7 @@ public class SimpleInputAdapter
    * @return
    */
   @Override
-  public IRecord procTrailer(IRecord r) {
+  public TrailerRecord procTrailer(TrailerRecord r) {
     // Nothing needed here
     return r;
   }
