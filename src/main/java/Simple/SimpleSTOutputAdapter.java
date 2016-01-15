@@ -84,18 +84,18 @@ public class SimpleSTOutputAdapter
    * @return
    */
   @Override
-  public Collection<IRecord> procValidRecord(IRecord r) {
+  public Collection<FlatRecord> procValidRecord(IRecord r) {
     FlatRecord tmpOutRecord;
     SimpleRecord tmpInRecord;
 
-    Collection<IRecord> Outbatch;
+    Collection<FlatRecord> Outbatch;
     Outbatch = new ArrayList<>();
 
     tmpOutRecord = new FlatRecord();
     tmpInRecord = (SimpleRecord) r;
     tmpOutRecord.setData(tmpInRecord.unmapOriginalData());
 
-    Outbatch.add((IRecord) tmpOutRecord);
+    Outbatch.add(tmpOutRecord);
 
     return Outbatch;
   }
@@ -109,7 +109,7 @@ public class SimpleSTOutputAdapter
    * @return
    */
   @Override
-  public Collection<IRecord> procErrorRecord(IRecord r) {
+  public Collection<FlatRecord> procErrorRecord(IRecord r) {
     return null;
   }
 }

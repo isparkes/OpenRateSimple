@@ -104,7 +104,7 @@
   <Resource>
     <LogFactory>
       <ClassName>OpenRate.logging.LogFactory</ClassName>
-      <Properties>logSimple.properties</Properties>
+      <Properties>logSimple.xml</Properties>
       <DefaultCategory>SimplePipe</DefaultCategory>
     </LogFactory>
 
