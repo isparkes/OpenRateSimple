@@ -153,7 +153,7 @@ public class SimpleInputAdapter
     }
 
     // Return the modified record in the Common record format (IRecord)
-    return (IRecord) tmpDataRecord;
+    return tmpDataRecord;
   }
 
   /**

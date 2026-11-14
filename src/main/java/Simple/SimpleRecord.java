@@ -122,13 +122,13 @@ public final class SimpleRecord extends RatingRecord {
   /**
    * Overloaded Constructor for SimpleRecord.
    *
-   * @param OriginalData - the flat record we are to map
+   * @param originalData - the flat record we are to map
    */
-  public SimpleRecord(String OriginalData) {
+  public SimpleRecord(String originalData) {
     super();
 
     // Set the data we received
-    this.setOriginalData(OriginalData);
+    this.setOriginalData(originalData);
   }
 
   /**
