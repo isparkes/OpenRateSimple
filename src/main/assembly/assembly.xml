@@ -45,12 +45,40 @@
         </excludes>
     </fileSet>
 
-    <!-- Copy over all the scripts we have -->
+    <!-- Launcher scripts for the unpacked distribution -->
     <fileSet>
       <directory>src/main/bin</directory>
       <outputDirectory>bin</outputDirectory>
+      <fileMode>0755</fileMode>
       <includes>
-        <include>**/*.template</include>
+        <include>*.sh</include>
+      </includes>
+    </fileSet>
+
+    <!-- Documentation at the root of the distribution -->
+    <fileSet>
+      <directory>src/main/dist</directory>
+      <outputDirectory>.</outputDirectory>
+      <includes>
+        <include>README.md</include>
+      </includes>
+    </fileSet>
+
+    <!-- License at the root of the distribution -->
+    <fileSet>
+      <directory>.</directory>
+      <outputDirectory>.</outputDirectory>
+      <includes>
+        <include>LICENSE</include>
+      </includes>
+    </fileSet>
+
+    <!-- Sample input, so the distribution can be tried out as shipped -->
+    <fileSet>
+      <directory>Data/Simple</directory>
+      <outputDirectory>samples</outputDirectory>
+      <includes>
+        <include>*.edr.gz</include>
       </includes>
     </fileSet>
 
@@ -60,8 +88,7 @@
       <outputDirectory>properties</outputDirectory>
       <includes>
         <include>Simple.properties.xml</include>
-        <include>logSimple.properties</include>
-        <include>log4j.dtd</include>
+        <include>logSimple.xml</include>
       </includes>
     </fileSet>
 

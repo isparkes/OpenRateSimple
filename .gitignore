@@ -1,1 +1,13 @@
 /target/
+
+# Output produced by running the pipeline
+Data/**/*.edr
+Data/**/*.done
+Data/**/*.out
+Data/**/*.dump
+Data/**/*.err
+/log/
+/logs/
+Semaphore.txt*
+
+.DS_Store
